@@ -9,9 +9,6 @@ on:
       - "**/*.css"
       - "**/*.js"
       - "images/**"
-      - ".github/workflows/validate.yml"
-      - ".htmlvalidate.json"
-      - ".stylelintrc.json"
 
 concurrency:
   group: pages-${{ github.ref }}
