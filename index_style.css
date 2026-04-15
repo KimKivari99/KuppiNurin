@@ -1,0 +1,533 @@
+/* Base typography and global text rendering */
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Sticky top navigation */
+#stickynav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Hero section background and centered content shell */
+#hero {
+  background-image: url("images/hero_home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#herobackground {
+  background-color: white;
+  width: 70%;
+  height: 400px;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Opening-hours intro block */
+#openinghours {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+}
+
+#openinghourscontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Business description section with parallax-like background */
+#businessdescription {
+  background-image: url("images/infosection_home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#businessdescriptionbackground {
+  background-color: white;
+  width: 70%;
+  height: 400px;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+/* Shared caption width for carousel text blocks */
+#business-caption-1,
+#business-caption-2,
+#business-caption-3,
+#menu-caption-1,
+#menu-caption-2 {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px; /* lisää ilmaa reunoihin */
+}
+
+/* Carousel controls and focus visibility */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px;
+  height: 50px;
+  color: white;
+  filter: invert(100%);
+}
+
+/* Carousel control button visibility */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  width: 8%;
+  border: none;
+  transition: all 0.8s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: white;
+  border: none;
+  transform: scale(1.05);
+}
+
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px white,
+    0 0 0 8px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+/* Prevent browser scroll anchoring from jumping carousel areas */
+#businessdescriptionCarousel,
+#menuCarousel,
+#businessdescriptionCarousel .carousel-inner,
+#menuCarousel .carousel-inner {
+  overflow-anchor: none;
+}
+
+/* Menu section heading area */
+#menusectionseparator {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+}
+
+#menusectionseparatorcontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Menu example carousel background panel */
+#menuexamples {
+  background-image: url("images/menusection_home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#menuexamplebackground {
+  background-color: white;
+  width: 70%;
+  height: 400px;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Product preview list layout and card spacing */
+#image-caption-coffee,
+#image-caption-pastries,
+#image-caption-specialdrinks,
+#image-caption-savory {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1.25rem); /* lisää ilmaa reunoihin */
+}
+
+ul.list-group-horizontal-sm {
+  justify-content: center;
+  gap: clamp(0.5rem, 1.2vw, 1.1rem);
+}
+
+ul.list-group-horizontal-sm > .list-group-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  flex: 0 1 auto;
+  padding: 0.25rem clamp(0.15rem, 0.4vw, 0.45rem);
+}
+
+.list-group-item {
+  background-color: transparent;
+  justify-content: center; /* 🔥 tärkein */
+  border: none;
+  color: black;
+  width: auto;
+}
+
+.list-group-item img {
+  width: clamp(72px, 10vw, 150px);
+  height: clamp(72px, 10vw, 150px);
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 9px;
+}
+
+/* Product name links and interaction states */
+.list-group-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(5.2rem, 8vw, 6.5rem);
+  min-height: 46px;
+  padding: 0.45rem clamp(0.55rem, 0.9vw, 1rem);
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  white-space: nowrap; /* prevents text from moving to the next line */
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.list-group-item a:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.list-group-item a:focus-visible {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 0 4px white,
+    0 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.list-group-item p {
+  margin: 0.45rem 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Catering section heading area */
+#cateringssectionseparator {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+}
+
+#cateringssectionseparatorcontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Catering feature panel and card layout */
+#catering {
+  background-image: url("images/catering_home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#cateringbackground {
+  background-color: white;
+  width: 70%;
+  height: 400px;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+#cateringcontent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+#cateringcontent .card {
+  width: min(100%, 30rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: none;
+}
+
+#cateringcontent .card-header {
+  flex: 0 0 auto;
+  border: none;
+}
+
+#cateringcontent .card-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  border: none;
+}
+
+#cateringcontent .card-img-top {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* Catering tabs, active states, and CTA button styles */
+#cateringTabs {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#cateringTabs .nav-link {
+  white-space: nowrap;
+  color: #2a211a;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(111, 78, 55, 0.35);
+  font-weight: 600;
+}
+
+#cateringTabsContent .tab-pane {
+  min-height: 100%;
+}
+
+#cateringTabsContent .card-text {
+  overflow-wrap: anywhere;
+}
+
+#cateringTabsContent .catering-cta-btn {
+  margin-top: 0.5rem;
+}
+
+#cateringTabs .nav-link:hover {
+  background-color: rgba(111, 78, 55, 0.12);
+  border-color: rgba(111, 78, 55, 0.55);
+}
+
+#cateringTabs .nav-link.active,
+#cateringTabs .show > .nav-link {
+  color: #fff;
+  background-color: #6f4e37;
+  border-color: #6f4e37;
+}
+
+.catering-cta-btn {
+  background-color: #6f4e37;
+  border-color: #6f4e37;
+  color: #fff;
+  font-weight: 600;
+}
+
+.catering-cta-btn:hover,
+.catering-cta-btn:focus-visible {
+  background-color: #5a3f2d;
+  border-color: #5a3f2d;
+  color: #fff;
+}
+
+/* Tablet and mobile adjustments */
+@media (max-width: 900px) {
+  .carousel-control-prev:focus-visible,
+  .carousel-control-next:focus-visible {
+    box-shadow: none;
+  }
+
+  #menuCarousel .carousel-inner {
+    overflow: visible;
+    min-height: 23rem;
+  }
+
+  #menuCarousel .carousel-item .d-flex {
+    height: auto !important;
+    min-height: 0;
+    align-items: flex-start !important;
+    padding: 0.25rem 0 0.75rem;
+  }
+
+  #herobackground {
+    width: 100%;
+    height: auto;
+  }
+  #businessdescriptionbackground {
+    width: 100%;
+    height: auto;
+  }
+  #menuexamplebackground {
+    width: 100%;
+    height: auto;
+  }
+  #cateringbackground {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+
+  #cateringcontent {
+    padding: 0.75rem;
+  }
+
+  #cateringcontent .card {
+    width: 100%;
+    max-height: calc(100% - 1.5rem);
+  }
+
+  #cateringcontent .card-body {
+    padding: 0.85rem;
+  }
+
+  #cateringTabs {
+    gap: 0.35rem;
+  }
+
+  #cateringcontent .card-img-top {
+    max-height: 150px;
+  }
+
+  #image-caption-coffee,
+  #image-caption-pastries,
+  #image-caption-specialdrinks,
+  #image-caption-savory {
+    height: auto;
+    width: auto;
+  }
+
+  /* Override Bootstrap's horizontal list to stack vertically */
+  ul.list-group-horizontal-sm {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  ul.list-group-horizontal-sm > .list-group-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 60px;
+    grid-template-areas:
+      "name img"
+      "price img";
+    row-gap: 0.15rem;
+    align-items: center;
+    justify-content: initial;
+    width: 100%;
+    flex: none;
+    padding: 0;
+  }
+
+  .list-group-item {
+    width: 100%;
+  }
+
+  .list-group-item img {
+    grid-area: img;
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    object-fit: cover;
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .list-group-item a {
+    grid-area: name;
+    justify-content: flex-start;
+    min-width: 100%;
+    min-height: 44px;
+    padding: 0.45rem 0.75rem;
+    text-align: left;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+
+  .list-group-item p {
+    grid-area: price;
+    margin: 0;
+    padding: 0 0.75rem 0.35rem;
+    text-align: left;
+    font-size: 14px;
+  }
+}

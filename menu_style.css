@@ -1,0 +1,387 @@
+/* Base typography and global text rendering */
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Sticky top navigation */
+#stickynav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Hero section background and centered content shell */
+#hero {
+  background-image: url("images/hero_menu_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#herobackground {
+  background-color: white;
+  width: 70%;
+  height: 400px;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Menu page section container */
+#coffeesectionseparator {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+}
+
+#coffeesectioncontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Category tabs (Bootstrap tabs customization) */
+.menu-tabs {
+  margin: 0.5rem auto 1.25rem;
+  border-bottom: 0;
+  gap: 0.5rem;
+}
+
+.menu-tabs .nav-link {
+  color: #2a211a;
+  border: 1px solid rgba(111, 78, 55, 0.35);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+}
+
+.menu-tabs .nav-link h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.1;
+}
+
+.menu-tabs .nav-link.active {
+  color: #fff;
+  background-color: #6f4e37;
+  border-color: #6f4e37;
+  box-shadow: 0 6px 16px rgba(111, 78, 55, 0.35);
+}
+
+.menu-tabs .nav-link:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.95),
+    0 0 0 8px rgba(13, 75, 74, 0.7);
+}
+
+.menu-tabs .nav-link.active h2 {
+  color: #fff;
+}
+
+.menu-tab-content {
+  width: 100%;
+}
+
+/* Product grid wrappers and desktop 4-column layout */
+#image-caption-coffee,
+#image-caption-pastries,
+#image-caption-specialdrinks {
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1.25rem); /* lisää ilmaa reunoihin */
+}
+
+#image-caption-coffee,
+#image-caption-pastries,
+#image-caption-specialdrinks {
+  max-width: 1400px;
+}
+
+ul.list-group-horizontal-sm {
+  justify-content: center;
+  gap: clamp(1.1rem, 2vw, 1.9rem);
+}
+
+#image-caption-coffee .list-group-horizontal-sm {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#image-caption-coffee .list-group-horizontal-sm > .list-group-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+#image-caption-pastries .list-group-horizontal-sm {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#image-caption-specialdrinks .list-group-horizontal-sm {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#image-caption-pastries .list-group-horizontal-sm > .list-group-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Legacy row-break helper elements are disabled in grid layout */
+#image-caption-coffee .coffee-row-break {
+  display: none;
+}
+
+#image-caption-pastries .pastries-row-break {
+  display: none;
+}
+
+/* Shared menu card styling */
+ul.list-group-horizontal-sm > .list-group-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  flex: 0 1 auto;
+  padding: 0.5rem clamp(0.35rem, 0.7vw, 0.8rem);
+}
+
+.list-group-item {
+  background-color: transparent;
+  justify-content: center; /* 🔥 tärkein */
+  border: none;
+  color: black;
+  font-size: 18px;
+  width: auto;
+}
+
+.list-group-item img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 9px;
+}
+
+/* Product title interactions and highlight state */
+.list-group-item .product-title {
+  display: inline-block;
+  padding: 0.1rem 0.35rem;
+  margin: 0;
+  color: black;
+  font-size: 1.17em;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.list-group-item .product-title:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.list-group-item .product-title:focus-visible {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 0 4px white,
+    0 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.list-group-item .product-title.product-link-highlight {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 0 4px white,
+    0 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.list-group-item p {
+  margin: 0.45rem 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Image wrapper and hover-description overlay */
+.coffee-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 9px;
+}
+
+.coffee-image-wrap:focus-visible {
+  outline: 3px solid #0d4b4a;
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+.coffee-image-wrap img {
+  margin-top: 0;
+}
+
+.coffee-hover-text {
+  position: absolute;
+  left: 0.55rem;
+  right: 0.55rem;
+  bottom: 0.55rem;
+  min-height: 34%;
+  padding: 0.8rem 0.9rem;
+  margin: 0;
+  border-radius: 8px;
+  background-color: rgba(244, 241, 238, 0.92);
+  color: #0d4b4a;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.coffee-image-wrap:hover .coffee-hover-text,
+.coffee-image-wrap:focus-visible .coffee-hover-text,
+.list-group-item.show-description .coffee-hover-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tablet breakpoint: 2 cards per row with smaller visuals */
+@media (max-width: 900px) {
+  #herobackground {
+    width: 100%;
+    height: auto;
+  }
+
+  #cateringTabs {
+    gap: 0.35rem;
+  }
+
+  #cateringcontent .card-img-top {
+    max-height: 150px;
+  }
+
+  #image-caption-coffee .list-group-horizontal-sm {
+    height: auto;
+    width: auto;
+  }
+
+  #image-caption-pastries .list-group-horizontal-sm {
+    height: auto;
+    width: auto;
+  }
+
+  #image-caption-specialdrinks .list-group-horizontal-sm {
+    height: auto;
+    width: auto;
+  }
+
+  #image-caption-coffee .list-group-horizontal-sm,
+  #image-caption-pastries .list-group-horizontal-sm,
+  #image-caption-specialdrinks .list-group-horizontal-sm {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  ul.list-group-horizontal-sm > .list-group-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.25rem clamp(0.15rem, 0.4vw, 0.45rem);
+  }
+
+  .list-group-item {
+    width: 100%;
+  }
+
+  .list-group-item img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    margin: 9px 0 0;
+  }
+
+  .coffee-image-wrap {
+    max-width: 220px;
+  }
+
+  .list-group-item .product-title {
+    min-height: 44px;
+    font-size: 1.05rem;
+  }
+
+  .list-group-item p {
+    margin: 0.45rem 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* Phone breakpoint: single-column card layout */
+@media (max-width: 600px) {
+  #image-caption-coffee .list-group-horizontal-sm,
+  #image-caption-pastries .list-group-horizontal-sm,
+  #image-caption-specialdrinks .list-group-horizontal-sm {
+    grid-template-columns: minmax(0, 220px);
+    justify-content: center;
+  }
+
+  .list-group-item img,
+  .coffee-image-wrap {
+    max-width: 180px;
+  }
+}

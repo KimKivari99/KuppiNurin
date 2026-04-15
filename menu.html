@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <!-- Global metadata, typography, and Bootstrap styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KuppiNurin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="menu_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Sticky top navigation and menu hero area -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary justify-content-center"
+        id="stickynav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">KuppiNurin</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Etusivu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pitopalvelu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Meistä</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Yhteystiedot</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="hero-section">
+        <div class="container-fluid" id="hero">
+          <div class="container" id="herobackground">
+            <div class="container justify-content-center" id="hero-content">
+              <h1 class="display-1">Menu</h1>
+              <p class="lead">Tutustu herkulliseen valikoimaamme</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Main menu section: tabbed categories and product cards -->
+      <section id="coffee-section">
+        <div class="container" id="coffeesectionseparator">
+          <div class="container" id="coffeesectioncontent">
+            <!-- Category tabs (Bootstrap tab component) -->
+            <ul class="nav nav-tabs menu-tabs" id="menuTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="coffee-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#coffee-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="coffee-pane"
+                  aria-selected="true">
+                  <h2>Kahvit</h2>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pastry-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#pastry-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="pastry-pane"
+                  aria-selected="false">
+                  <h2>Leivonnaiset</h2>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="specialdrinks-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#specialdrinks-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="specialdrinks-pane"
+                  aria-selected="false">
+                  <h2>Erikoisjuomat</h2>
+                </button>
+              </li>
+            </ul>
+
+            <!-- Tab panes: each pane contains one product category grid -->
+            <div class="tab-content menu-tab-content" id="menuTabsContent">
+              <!-- Coffee products pane -->
+              <div
+                class="tab-pane fade show active"
+                id="coffee-pane"
+                role="tabpanel"
+                aria-labelledby="coffee-tab"
+                tabindex="0">
+                <div class="row" id="image-caption-coffee">
+                  <ul class="list-group list-group-horizontal-sm">
+                    <li class="list-group-item">
+                      <h3 class="product-title">Flat White</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_flatwhite.jpg" alt="Flat White" />
+                        <p class="coffee-hover-text">
+                          Silkkisen maitovaahdon ja vahvan espresson
+                          tasapainoinen klassikko
+                        </p>
+                      </div>
+                      <p>3,90 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Espresso</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_expresso.jpg" alt="Espresso" />
+                        <p class="coffee-hover-text">
+                          Herkullinen ja vahva espresso
+                        </p>
+                      </div>
+                      <p>2,50 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Mocha</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_mocha.jpg" alt="Mocha" />
+                        <p class="coffee-hover-text">
+                          Täyteläinen kahvijuoma suklaan ja pehmeän maidon
+                          yhdistelmällä
+                        </p>
+                      </div>
+                      <p>4,20 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Americano</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_americano.jpg" alt="Americano" />
+                        <p class="coffee-hover-text">
+                          Pehmeä, pitkä espresso miedolla mutta täyteläisellä
+                          maulla
+                        </p>
+                      </div>
+                      <p>3,00 €</p>
+                    </li>
+                    <li class="coffee-row-break" aria-hidden="true"></li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Cappuccino</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_cappuccino.jpg"
+                          alt="Cappuccino" />
+                        <p class="coffee-hover-text">
+                          Kermainen cappuccino, täydellinen aamun aloitukseen
+                        </p>
+                      </div>
+                      <p>3,20 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Cold Brew</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_coldbrew.jpg" alt="Cold Brew" />
+                        <p class="coffee-hover-text">
+                          Raikas kylmäuutettu kahvi, jossa on pehmeä maku ja
+                          vähäinen happamuus
+                        </p>
+                      </div>
+                      <p>4,00 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Latte</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_latte.jpg" alt="Latte" />
+                        <p class="coffee-hover-text">
+                          Pehmeä latte, jossa on runsaasti maitovaahtoa
+                        </p>
+                      </div>
+                      <p>3,50 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Macchiato</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_macchiato.jpg" alt="Macchiato" />
+                        <p class="coffee-hover-text">
+                          Tuhti espresso viimeisteltynä kevyellä
+                          maitovaahtolusikallisella
+                        </p>
+                      </div>
+                      <p>3,10 €</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Pastry products pane -->
+              <div
+                class="tab-pane fade"
+                id="pastry-pane"
+                role="tabpanel"
+                aria-labelledby="pastry-tab"
+                tabindex="0">
+                <div class="row" id="image-caption-pastries">
+                  <ul class="list-group list-group-horizontal-sm">
+                    <li class="list-group-item">
+                      <h3 class="product-title">Croissant</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_croissant.jpg" alt="Croissant" />
+                        <p class="coffee-hover-text">
+                          Voitaikinaan leivottu rapea klassikko, täydellinen
+                          kahvin kanssa
+                        </p>
+                      </div>
+                      <p>3,80 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Muffinssi</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_muffin.jpg" alt="Muffinssi" />
+                        <p class="coffee-hover-text">
+                          Pehmeä ja mehevä muffinssi päivän makeaan
+                          herkkuhetkeen
+                        </p>
+                      </div>
+                      <p>4,20 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Korvapuusti</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_korvapuusti.jpg"
+                          alt="Korvapuusti" />
+                        <p class="coffee-hover-text">
+                          Kanelinen suomalainen klassikko tuoreena uunista
+                        </p>
+                      </div>
+                      <p>3,60 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Suklaakakku</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_chocolatecake.jpg"
+                          alt="Suklaakakku" />
+                        <p class="coffee-hover-text">
+                          Täyteläinen suklaakakku samettisella rakenteella
+                        </p>
+                      </div>
+                      <p>5,40 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Mustikkapiirakka</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_blueberrypie.jpg"
+                          alt="Mustikkapiirakka" />
+                        <p class="coffee-hover-text">
+                          Meheva marjapiirakka, jossa on runsaasti kotimaisia
+                          mustikoita
+                        </p>
+                      </div>
+                      <p>4,80 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Porkkanakakku</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_carrotcake.jpg"
+                          alt="Porkkanakakku" />
+                        <p class="coffee-hover-text">
+                          Mausteinen ja pehmea kakku tuorejuustokuorrutteella
+                        </p>
+                      </div>
+                      <p>5,20 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Vadelmaleivos</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_raspberrypastry.jpg"
+                          alt="Vadelmaleivos" />
+                        <p class="coffee-hover-text">
+                          Raikas vadelmainen leivos, jossa on kevyt vaniljatayte
+                        </p>
+                      </div>
+                      <p>4,60 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Sitruunatorttu</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_lemontart.jpg"
+                          alt="Sitruunatorttu" />
+                        <p class="coffee-hover-text">
+                          Kirpean makea sitruunatorttu rapealla pohjalla
+                        </p>
+                      </div>
+                      <p>4,90 €</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Special drinks pane -->
+              <div
+                class="tab-pane fade"
+                id="specialdrinks-pane"
+                role="tabpanel"
+                aria-labelledby="specialdrinks-tab"
+                tabindex="0">
+                <div class="row" id="image-caption-specialdrinks">
+                  <ul class="list-group list-group-horizontal-sm">
+                    <li class="list-group-item">
+                      <h3 class="product-title">Croissant</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_croissant.jpg" alt="Croissant" />
+                        <p class="coffee-hover-text">
+                          Voitaikinaan leivottu rapea klassikko, täydellinen
+                          kahvin kanssa
+                        </p>
+                      </div>
+                      <p>3,80 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Muffinssi</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img src="images/menu_muffin.jpg" alt="Muffinssi" />
+                        <p class="coffee-hover-text">
+                          Pehmeä ja mehevä muffinssi päivän makeaan
+                          herkkuhetkeen
+                        </p>
+                      </div>
+                      <p>4,20 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Korvapuusti</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_korvapuusti.jpg"
+                          alt="Korvapuusti" />
+                        <p class="coffee-hover-text">
+                          Kanelinen suomalainen klassikko tuoreena uunista
+                        </p>
+                      </div>
+                      <p>3,60 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Suklaakakku</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_chocolatecake.jpg"
+                          alt="Suklaakakku" />
+                        <p class="coffee-hover-text">
+                          Täyteläinen suklaakakku samettisella rakenteella
+                        </p>
+                      </div>
+                      <p>5,40 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Mustikkapiirakka</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_blueberrypie.jpg"
+                          alt="Mustikkapiirakka" />
+                        <p class="coffee-hover-text">
+                          Meheva marjapiirakka, jossa on runsaasti kotimaisia
+                          mustikoita
+                        </p>
+                      </div>
+                      <p>4,80 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Porkkanakakku</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_carrotcake.jpg"
+                          alt="Porkkanakakku" />
+                        <p class="coffee-hover-text">
+                          Mausteinen ja pehmea kakku tuorejuustokuorrutteella
+                        </p>
+                      </div>
+                      <p>5,20 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Vadelmaleivos</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_raspberrypastry.jpg"
+                          alt="Vadelmaleivos" />
+                        <p class="coffee-hover-text">
+                          Raikas vadelmainen leivos, jossa on kevyt vaniljatayte
+                        </p>
+                      </div>
+                      <p>4,60 €</p>
+                    </li>
+                    <li class="list-group-item">
+                      <h3 class="product-title">Sitruunatorttu</h3>
+                      <div class="coffee-image-wrap" tabindex="0">
+                        <img
+                          src="images/menu_lemontart.jpg"
+                          alt="Sitruunatorttu" />
+                        <p class="coffee-hover-text">
+                          Kirpean makea sitruunatorttu rapealla pohjalla
+                        </p>
+                      </div>
+                      <p>4,90 €</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer links and copyright -->
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+        </li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2025 KuppiNurin Oy</p>
+    </footer>
+    <!-- Bootstrap JavaScript + site-specific behavior -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
