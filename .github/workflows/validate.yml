@@ -4,6 +4,18 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "**/*.html"
+      - "**/*.css"
+      - "**/*.js"
+      - "images/**"
+      - ".github/workflows/validate.yml"
+      - ".htmlvalidate.json"
+      - ".stylelintrc.json"
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -14,6 +26,7 @@ jobs:
   validate-html:
     name: Validate HTML
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -22,7 +35,7 @@ jobs:
           node-version: "20"
 
       - name: Install HTML validator
-        run: npm install --no-save html-validate
+        run: npm install --no-save --ignore-scripts html-validate
 
       - name: Run HTML validator
         run: npx html-validate "**/*.html"
@@ -30,6 +43,7 @@ jobs:
   validate-css:
     name: Validate CSS (Stylelint)
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
@@ -38,7 +52,7 @@ jobs:
           node-version: "20"
 
       - name: Install Stylelint
-        run: npm install --no-save stylelint stylelint-config-standard
+        run: npm install --no-save --ignore-scripts stylelint stylelint-config-standard
 
       - name: Run Stylelint
         run: npx stylelint "**/*.css"
@@ -46,6 +60,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: [validate-html, validate-css]
     environment:
       name: github-pages
