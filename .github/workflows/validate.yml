@@ -12,15 +12,20 @@ permissions:
 
 jobs:
   validate-html:
-    name: Validate HTML (W3C Nu Checker)
+    name: Validate HTML
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run W3C Nu HTML Validator
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      - uses: actions/setup-node@v4
         with:
-          root: .
+          node-version: "20"
+
+      - name: Install HTML validator
+        run: npm install --no-save html-validate
+
+      - name: Run HTML validator
+        run: npx html-validate "**/*.html"
 
   validate-css:
     name: Validate CSS (Stylelint)
@@ -34,14 +39,6 @@ jobs:
 
       - name: Install Stylelint
         run: npm install --no-save stylelint stylelint-config-standard
-
-      - name: Create Stylelint config
-        run: |
-          cat <<'EOF' > .stylelintrc.json
-          {
-            "extends": "stylelint-config-standard"
-          }
-          EOF
 
       - name: Run Stylelint
         run: npx stylelint "**/*.css"

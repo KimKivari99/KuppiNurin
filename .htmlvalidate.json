@@ -1,0 +1,6 @@
+{
+  "extends": ["html-validate:standard"],
+  "rules": {
+    "no-utf8-bom": "off"
+  }
+}

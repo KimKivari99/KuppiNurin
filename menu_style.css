@@ -1,6 +1,6 @@
 /* Base typography and global text rendering */
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: Outfit, sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
@@ -47,7 +47,7 @@ body {
   align-items: center;
   height: 100%;
   color: black;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 70%);
 }
 
 /* Menu page section container */
@@ -76,14 +76,15 @@ body {
 
 .menu-tabs .nav-link {
   color: #2a211a;
-  border: 1px solid rgba(111, 78, 55, 0.35);
+  border: 1px solid rgb(111 78 55 / 35%);
   border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgb(255 255 255 / 70%);
   font-weight: 600;
   padding: 0.4rem 1rem;
 }
 
-.menu-tabs .nav-link h2 {
+.menu-tabs .nav-link .menu-tab-title {
+  display: inline-block;
   margin: 0;
   font-size: clamp(1.4rem, 2.2vw, 2rem);
   line-height: 1.1;
@@ -93,17 +94,17 @@ body {
   color: #fff;
   background-color: #6f4e37;
   border-color: #6f4e37;
-  box-shadow: 0 6px 16px rgba(111, 78, 55, 0.35);
+  box-shadow: 0 6px 16px rgb(111 78 55 / 35%);
 }
 
 .menu-tabs .nav-link:focus-visible {
   outline: none;
   box-shadow:
-    0 0 0 4px rgba(255, 255, 255, 0.95),
-    0 0 0 8px rgba(13, 75, 74, 0.7);
+    0 0 0 4px rgb(255 255 255 / 95%),
+    0 0 0 8px rgb(13 75 74 / 70%);
 }
 
-.menu-tabs .nav-link.active h2 {
+.menu-tabs .nav-link.active .menu-tab-title {
   color: #fff;
 }
 
@@ -116,13 +117,8 @@ body {
 #image-caption-pastries,
 #image-caption-specialdrinks {
   margin: 0 auto;
-  padding: 0 clamp(0.5rem, 2vw, 1.25rem); /* lisää ilmaa reunoihin */
-}
-
-#image-caption-coffee,
-#image-caption-pastries,
-#image-caption-specialdrinks {
   max-width: 1400px;
+  padding: 0 clamp(0.5rem, 2vw, 1.25rem); /* lisää ilmaa reunoihin */
 }
 
 ul.list-group-horizontal-sm {
@@ -136,11 +132,6 @@ ul.list-group-horizontal-sm {
   width: 100%;
   justify-content: center;
   align-items: stretch;
-}
-
-#image-caption-coffee .list-group-horizontal-sm > .list-group-item {
-  width: 100%;
-  max-width: 100%;
 }
 
 #image-caption-pastries .list-group-horizontal-sm {
@@ -159,11 +150,6 @@ ul.list-group-horizontal-sm {
   align-items: stretch;
 }
 
-#image-caption-pastries .list-group-horizontal-sm > .list-group-item {
-  width: 100%;
-  max-width: 100%;
-}
-
 /* Legacy row-break helper elements are disabled in grid layout */
 #image-caption-coffee .coffee-row-break {
   display: none;
@@ -174,6 +160,15 @@ ul.list-group-horizontal-sm {
 }
 
 /* Shared menu card styling */
+.list-group-item {
+  background-color: transparent;
+  justify-content: center; /* 🔥 tärkein */
+  border: none;
+  color: black;
+  font-size: 18px;
+  width: auto;
+}
+
 ul.list-group-horizontal-sm > .list-group-item {
   display: flex;
   flex-direction: column;
@@ -182,15 +177,6 @@ ul.list-group-horizontal-sm > .list-group-item {
   width: auto;
   flex: 0 1 auto;
   padding: 0.5rem clamp(0.35rem, 0.7vw, 0.8rem);
-}
-
-.list-group-item {
-  background-color: transparent;
-  justify-content: center; /* 🔥 tärkein */
-  border: none;
-  color: black;
-  font-size: 18px;
-  width: auto;
 }
 
 .list-group-item img {
@@ -221,22 +207,22 @@ ul.list-group-horizontal-sm > .list-group-item {
 }
 
 .list-group-item .product-title:hover {
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: rgb(255 255 255 / 65%);
 }
 
 .list-group-item .product-title:focus-visible {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255 255 255 / 90%);
   box-shadow:
     0 0 0 4px white,
-    0 0 0 8px rgba(0, 0, 0, 0.6);
+    0 0 0 8px rgb(0 0 0 / 60%);
 }
 
 .list-group-item .product-title.product-link-highlight {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255 255 255 / 90%);
   box-shadow:
     0 0 0 4px white,
-    0 0 0 8px rgba(0, 0, 0, 0.6);
+    0 0 0 8px rgb(0 0 0 / 60%);
 }
 
 .list-group-item p {
@@ -273,7 +259,7 @@ ul.list-group-horizontal-sm > .list-group-item {
   padding: 0.8rem 0.9rem;
   margin: 0;
   border-radius: 8px;
-  background-color: rgba(244, 241, 238, 0.92);
+  background-color: rgb(244 241 238 / 92%);
   color: #0d4b4a;
   text-align: center;
   font-size: 24px;
@@ -294,14 +280,10 @@ ul.list-group-horizontal-sm > .list-group-item {
 }
 
 /* Tablet breakpoint: 2 cards per row with smaller visuals */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   #herobackground {
     width: 100%;
     height: auto;
-  }
-
-  #cateringTabs {
-    gap: 0.35rem;
   }
 
   #cateringcontent .card-img-top {
@@ -332,6 +314,10 @@ ul.list-group-horizontal-sm > .list-group-item {
     gap: 0.8rem;
   }
 
+  .list-group-item {
+    width: 100%;
+  }
+
   ul.list-group-horizontal-sm > .list-group-item {
     display: flex;
     flex-direction: column;
@@ -339,10 +325,6 @@ ul.list-group-horizontal-sm > .list-group-item {
     justify-content: flex-start;
     width: 100%;
     padding: 0.25rem clamp(0.15rem, 0.4vw, 0.45rem);
-  }
-
-  .list-group-item {
-    width: 100%;
   }
 
   .list-group-item img {
@@ -372,7 +354,7 @@ ul.list-group-horizontal-sm > .list-group-item {
 }
 
 /* Phone breakpoint: single-column card layout */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   #image-caption-coffee .list-group-horizontal-sm,
   #image-caption-pastries .list-group-horizontal-sm,
   #image-caption-specialdrinks .list-group-horizontal-sm {
