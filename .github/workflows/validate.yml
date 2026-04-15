@@ -21,7 +21,6 @@ jobs:
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
           root: .
-          extra: --also-check-css
 
   validate-css:
     name: Validate CSS (Stylelint)
@@ -34,10 +33,18 @@ jobs:
           node-version: "20"
 
       - name: Install Stylelint
-        run: npm install --save-dev stylelint stylelint-config-standard
+        run: npm install --no-save stylelint stylelint-config-standard
+
+      - name: Create Stylelint config
+        run: |
+          cat <<'EOF' > .stylelintrc.json
+          {
+            "extends": "stylelint-config-standard"
+          }
+          EOF
 
       - name: Run Stylelint
-        run: npx stylelint "**/*.css" --config '{"extends":"stylelint-config-standard"}'
+        run: npx stylelint "**/*.css"
 
   deploy:
     name: Deploy to GitHub Pages
