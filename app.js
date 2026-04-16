@@ -1,4 +1,6 @@
+// Track previous scroll position to detect scroll direction.
 let lastScrollTop = 0;
+// Shared reference to the sticky top navigation element.
 const navbar = document.getElementById("stickynav");
 
 // Hide navbar on scroll down
@@ -64,23 +66,45 @@ function setActiveNavbarLink() {
   });
 }
 
+// Resolve a product name from URL to a matching menu card title and its tab.
 function findMenuProductTarget(product) {
   // Find the target product title element and the tab that contains it.
   if (!product) {
     return null;
   }
 
+  // Convert labels into a comparison-safe key so different text forms still match.
+  // Example: "Chai Latte", "chai-latte", and "CHAI  LATTE" all become "chailatte".
+  const normalizeProductLabel = (value) =>
+    (value || "")
+      // Make matching case-insensitive.
+      .toLowerCase()
+      // Split accented characters into base + combining mark (for reliable accent stripping).
+      .normalize("NFD")
+      // Remove all combining diacritic marks.
+      .replace(/[\u0300-\u036f]/g, "")
+      // Keep only letters and numbers so spaces/punctuation do not affect matching.
+      .replace(/[^a-z0-9]/g, "");
+
+  // Normalize the incoming URL product value once and reuse it for all comparisons.
+  const normalizedProduct = normalizeProductLabel(product);
+
+  // Search one product section and return both the found title element and its tab id.
   const getMatch = (selector, tabButtonId) => {
+    // Collect all product-title nodes in the current section.
     const links = document.querySelectorAll(selector);
+    // Find first title whose normalized text equals the normalized URL product value.
     const match = Array.from(links).find((link) => {
-      const label = (link.textContent || "").trim().toLowerCase();
-      return label === product;
+      const label = (link.textContent || "").trim();
+      return normalizeProductLabel(label) === normalizedProduct;
     });
 
+    // Return null when this section does not contain a matching product.
     if (!match) {
       return null;
     }
 
+    // Return the matched title node and the tab button id used to activate the right tab.
     return { link: match, tabButtonId };
   };
 
@@ -92,10 +116,15 @@ function findMenuProductTarget(product) {
     getMatch(
       "#image-caption-pastries .list-group-item > .product-title",
       "pastry-tab",
+    ) ||
+    getMatch(
+      "#image-caption-specialdrinks .list-group-item > .product-title",
+      "specialdrinks-tab",
     )
   );
 }
 
+// Wire tab keyboard navigation and optionally open tab from ?product query.
 function initMenuTabs() {
   // Initialize keyboard-accessible Bootstrap tabs and open tab from URL product query.
   const tabButtons = document.querySelectorAll("#menuTabs .nav-link");
@@ -179,6 +208,7 @@ function initMenuTabs() {
   }
 }
 
+// Open, highlight, and scroll to the product card defined in ?product=... .
 function initMenuProductFromUrl() {
   // Deep-link behavior: highlight and scroll to product card from ?product=... query.
   const coffeeItems = document.querySelectorAll(
@@ -189,7 +219,15 @@ function initMenuProductFromUrl() {
     "#image-caption-pastries .list-group-item",
   );
 
-  if (!coffeeItems.length && !pastryItems.length) {
+  const specialDrinksItems = document.querySelectorAll(
+    "#image-caption-specialdrinks .list-group-item",
+  );
+
+  if (
+    !coffeeItems.length &&
+    !pastryItems.length &&
+    !specialDrinksItems.length
+  ) {
     return;
   }
 
@@ -302,6 +340,7 @@ function initMenuProductFromUrl() {
   window.history.replaceState({}, "", cleanUrl);
 }
 
+// Toggle menu card description overlays with mouse and keyboard interactions.
 function initCoffeeDescriptionToggle() {
   // Toggle product description overlays by click or keyboard on product titles.
   const coffeeItems = document.querySelectorAll(
@@ -310,12 +349,19 @@ function initCoffeeDescriptionToggle() {
   const pastryItems = document.querySelectorAll(
     "#image-caption-pastries .list-group-item",
   );
+  const specialDrinksItems = document.querySelectorAll(
+    "#image-caption-specialdrinks .list-group-item",
+  );
 
-  if (!coffeeItems.length && !pastryItems.length) {
+  if (
+    !coffeeItems.length &&
+    !pastryItems.length &&
+    !specialDrinksItems.length
+  ) {
     return;
   }
 
-  const allItems = [...coffeeItems, ...pastryItems];
+  const allItems = [...coffeeItems, ...pastryItems, ...specialDrinksItems];
 
   const clearAllItems = () => {
     // Keep only one expanded product card at a time.
@@ -364,8 +410,10 @@ function initCoffeeDescriptionToggle() {
 
   coffeeItems.forEach(bindToggle);
   pastryItems.forEach(bindToggle);
+  specialDrinksItems.forEach(bindToggle);
 }
 
+// Initialize page behaviors for nav state, tabs, deep links, and card toggles.
 setActiveNavbarLink();
 initMenuTabs();
 initMenuProductFromUrl();
