@@ -120,6 +120,10 @@ function findMenuProductTarget(product) {
     getMatch(
       "#image-caption-specialdrinks .list-group-item > .product-title",
       "specialdrinks-tab",
+    ) ||
+    getMatch(
+      "#image-caption-savory .list-group-item > .product-title",
+      "savory-tab",
     )
   );
 }
@@ -223,10 +227,15 @@ function initMenuProductFromUrl() {
     "#image-caption-specialdrinks .list-group-item",
   );
 
+  const savoryItems = document.querySelectorAll(
+    "#image-caption-savory .list-group-item",
+  );
+
   if (
     !coffeeItems.length &&
     !pastryItems.length &&
-    !specialDrinksItems.length
+    !specialDrinksItems.length &&
+    !savoryItems.length
   ) {
     return;
   }
@@ -352,16 +361,25 @@ function initCoffeeDescriptionToggle() {
   const specialDrinksItems = document.querySelectorAll(
     "#image-caption-specialdrinks .list-group-item",
   );
+  const savoryItems = document.querySelectorAll(
+    "#image-caption-savory .list-group-item",
+  );
 
   if (
     !coffeeItems.length &&
     !pastryItems.length &&
-    !specialDrinksItems.length
+    !specialDrinksItems.length &&
+    !savoryItems.length
   ) {
     return;
   }
 
-  const allItems = [...coffeeItems, ...pastryItems, ...specialDrinksItems];
+  const allItems = [
+    ...coffeeItems,
+    ...pastryItems,
+    ...specialDrinksItems,
+    ...savoryItems,
+  ];
 
   const clearAllItems = () => {
     // Keep only one expanded product card at a time.
@@ -411,6 +429,7 @@ function initCoffeeDescriptionToggle() {
   coffeeItems.forEach(bindToggle);
   pastryItems.forEach(bindToggle);
   specialDrinksItems.forEach(bindToggle);
+  savoryItems.forEach(bindToggle);
 }
 
 // Initialize page behaviors for nav state, tabs, deep links, and card toggles.
