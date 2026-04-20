@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   width: 100%;
   height: 500px;
   display: flex;
@@ -51,13 +51,13 @@ body {
 }
 
 /* Menu page section container */
-#coffeesectionseparator {
+#menu-section-separator {
   width: 100%;
   display: flex;
   padding-top: 20px;
 }
 
-#coffeesectioncontent {
+#menu-section-content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,8 @@ body {
 /* Product grid wrappers and desktop 4-column layout */
 #image-caption-coffee,
 #image-caption-pastries,
-#image-caption-specialdrinks {
+#image-caption-specialdrinks,
+#image-caption-savory {
   margin: 0 auto;
   max-width: 1400px;
   padding: 0 clamp(0.5rem, 2vw, 1.25rem); /* lisää ilmaa reunoihin */
@@ -150,12 +151,28 @@ ul.list-group-horizontal-sm {
   align-items: stretch;
 }
 
+#image-caption-savory .list-group-horizontal-sm {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
 /* Legacy row-break helper elements are disabled in grid layout */
 #image-caption-coffee .coffee-row-break {
   display: none;
 }
 
 #image-caption-pastries .pastries-row-break {
+  display: none;
+}
+
+#image-caption-specialdrinks .pastries-row-break {
+  display: none;
+}
+
+#image-caption-savory .savory-row-break {
   display: none;
 }
 
@@ -279,6 +296,12 @@ ul.list-group-horizontal-sm > .list-group-item {
   transform: translateY(0);
 }
 
+@media (width >= 900px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
 /* Tablet breakpoint: 2 cards per row with smaller visuals */
 @media (width <= 900px) {
   #herobackground {
@@ -305,9 +328,15 @@ ul.list-group-horizontal-sm > .list-group-item {
     width: auto;
   }
 
+  #image-caption-savory .list-group-horizontal-sm {
+    height: auto;
+    width: auto;
+  }
+
   #image-caption-coffee .list-group-horizontal-sm,
   #image-caption-pastries .list-group-horizontal-sm,
-  #image-caption-specialdrinks .list-group-horizontal-sm {
+  #image-caption-specialdrinks .list-group-horizontal-sm,
+  #image-caption-savory .list-group-horizontal-sm {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
@@ -357,7 +386,8 @@ ul.list-group-horizontal-sm > .list-group-item {
 @media (width <= 600px) {
   #image-caption-coffee .list-group-horizontal-sm,
   #image-caption-pastries .list-group-horizontal-sm,
-  #image-caption-specialdrinks .list-group-horizontal-sm {
+  #image-caption-specialdrinks .list-group-horizontal-sm,
+  #image-caption-savory .list-group-horizontal-sm {
     grid-template-columns: minmax(0, 220px);
     justify-content: center;
   }
