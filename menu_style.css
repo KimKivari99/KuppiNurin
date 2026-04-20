@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   width: 100%;
   height: 500px;
   display: flex;
@@ -294,6 +294,12 @@ ul.list-group-horizontal-sm > .list-group-item {
 .list-group-item.show-description .coffee-hover-text {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (width >= 900px) {
+  #hero {
+    background-attachment: fixed;
+  }
 }
 
 /* Tablet breakpoint: 2 cards per row with smaller visuals */
