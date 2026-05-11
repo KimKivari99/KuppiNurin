@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <!-- Global metadata, typography, and Bootstrap styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KuppiNurin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="pitopalvelu_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Sticky top navigation and menu hero area -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center" id="stickynav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">KuppiNurin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Etusivu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pitopalvelu.html">Pitopalvelu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Meistä</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Yhteystiedot</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="hero-section">
+            <div class="container-fluid" id="hero">
+                <div class="container" id="herobackground">
+                    <div class="container justify-content-center" id="hero-content">
+                        <h1 class="display-1">Pitopalvelu</h1>
+                        <p class="lead">
+                            Tuoreita herkkuja tapahtumiin ja juhliin tilaustyönä
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- Catering order form section -->
+        <section id="order-form-section">
+            <div id="order-form-intro-band">
+                <div class="container" id="order-form-intro-separator">
+                    <div class="order-info-card">
+                        <p class="order-kicker">Rakenna tarjoilu helposti</p>
+                        <h2>Tapahtuman pitopalvelutilaus</h2>
+                        <p>
+                            Kerro meille tapahtumasi tiedot ja toiveet. Vahvistamme saatavuuden ja lähetämme
+                            tarjouksen 24 tunnin sisällä.
+                        </p>
+                        <ul class="order-info-list">
+                            <li>Toimitus, kattaus ja tarjoilu sovittavissa</li>
+                            <li>Kasvis-, vegaani- ja allergiavaihtoehdot</li>
+                            <li>Tilaukset sujuvasti yrityksille ja yksityisille</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="order-form-separator">
+                <div class="row g-4 align-items-start" id="order-form-layout">
+                    <div class="col-12 col-lg-10 mx-auto">
+                        <form class="catering-order-form" action="#" method="post">
+                            <fieldset>
+                                <legend>Tapahtuman tiedot</legend>
+                                <div class="form-grid two-col">
+                                    <div class="form-field">
+                                        <label for="event-name">Tapahtuman nimi</label>
+                                        <input type="text" id="event-name" name="eventName"
+                                            placeholder="Esim. Kesäjuhlat" required />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="event-type">Tapahtuman tyyppi</label>
+                                        <select id="event-type" name="eventType" required>
+                                            <option value="" selected disabled>Valitse tyyppi</option>
+                                            <option value="haat">Häät</option>
+                                            <option value="syntymapaivat">Syntymäpäivät</option>
+                                            <option value="yritystapahtuma">Yritystapahtuma</option>
+                                            <option value="muistotilaisuus">Muistotilaisuus</option>
+                                            <option value="muu">Muu tapahtuma</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="event-date">Päivämäärä</label>
+                                        <input type="date" id="event-date" name="eventDate" required />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="guest-count">Henkilömäärä</label>
+                                        <input type="number" id="guest-count" name="guestCount" min="10" max="500"
+                                            placeholder="Esim. 80" required />
+                                    </div>
+                                    <div class="form-field full-width">
+                                        <label for="event-location">Tapahtumapaikka</label>
+                                        <input type="text" id="event-location" name="eventLocation"
+                                            placeholder="Katuosoite ja paikkakunta" required />
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Tarjoiluvalinnat</legend>
+                                <div class="form-grid two-col">
+                                    <div class="form-field">
+                                        <label for="service-style">Tarjoilutapa</label>
+                                        <select id="service-style" name="serviceStyle" required>
+                                            <option value="" selected disabled>Valitse tarjoilutapa</option>
+                                            <option value="buffet">Buffet</option>
+                                            <option value="poytiintarjoilu">Pöytiin tarjoilu</option>
+                                            <option value="cocktail">Cocktail / finger food</option>
+                                            <option value="kahvitarjoilu">Kahvitarjoilu</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="budget">Budjetti (valinnainen)</label>
+                                        <input type="text" id="budget" name="budget"
+                                            placeholder="Esim. 2500-3500 EUR" />
+                                    </div>
+                                    <div class="form-field full-width">
+                                        <label for="menu-wishes">Menutoiveet</label>
+                                        <textarea id="menu-wishes" name="menuWishes" rows="4"
+                                            placeholder="Kerro toivotuista mauista, annoksista tai teemasta"></textarea>
+                                    </div>
+                                    <div class="form-field full-width">
+                                        <label for="dietary-needs">Erityisruokavaliot ja allergiat</label>
+                                        <textarea id="dietary-needs" name="dietaryNeeds" rows="3"
+                                            placeholder="Esim. gluteeniton, vegaaninen, pähkinäallergia"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Yhteystiedot</legend>
+                                <div class="form-grid two-col">
+                                    <div class="form-field">
+                                        <label for="contact-name">Yhteyshenkilö</label>
+                                        <input type="text" id="contact-name" name="contactName" required />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="company-name">Yritys (valinnainen)</label>
+                                        <input type="text" id="company-name" name="companyName" />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="contact-email">Sahkoposti</label>
+                                        <input type="email" id="contact-email" name="contactEmail"
+                                            placeholder="nimi@esimerkki.fi" required />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="contact-phone">Puhelin</label>
+                                        <input type="tel" id="contact-phone" name="contactPhone"
+                                            placeholder="040 123 4567" required />
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-submit-row">
+                                <button type="submit" class="order-submit-btn">Laheta tarjouspyynto</button>
+                                <p class="form-note">Lomake ei tallenna tietoja automaattisesti. Ota yhteytta, jos
+                                    tarvitset nopean vastauksen.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer links and copyright -->
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+            </li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2025 KuppiNurin Oy</p>
+    </footer>
+    <!-- Bootstrap JavaScript + site-specific behavior -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -36,6 +36,7 @@ function setActiveNavbarLink() {
   const pageAliases = {
     etusivu: "index.html",
     menu: "menu.html",
+    pitopalvelu: "pitopalvelu.html",
   };
 
   document.querySelectorAll(".nav-item .nav-link").forEach((link) => {
