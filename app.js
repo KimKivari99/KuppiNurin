@@ -37,6 +37,7 @@ function setActiveNavbarLink() {
     etusivu: "index.html",
     menu: "menu.html",
     pitopalvelu: "pitopalvelu.html",
+    meista: "meista.html",
   };
 
   document.querySelectorAll(".nav-item .nav-link").forEach((link) => {
