@@ -37,7 +37,7 @@
   color: #2a211a;
 }
 
-#pitopalvelu-menu-content p {
+.pitopalvelu-menu-copy {
   margin: 0 0 1.2rem;
   color: #2a211a;
 }
@@ -51,6 +51,7 @@
   padding-right: 2.2rem;
   transition: background 0.2s;
 }
+
 .pitopalvelu-btn:hover,
 .pitopalvelu-btn:focus {
   background-color: #543a27;
@@ -71,6 +72,7 @@
     padding: 0 18px;
   }
 }
+
 /* Base typography and global text rendering */
 body {
   font-family: Outfit, sans-serif;
@@ -88,12 +90,12 @@ body {
 
 /* Keep navbar links truly centered when social icons are on the right */
 @media (width >= 992px) {
-  #navbarSupportedContent {
+  #navbar-supported-content {
     position: relative;
     min-height: 2.5rem;
   }
 
-  #navbarSupportedContent > .navbar-nav {
+  #navbar-supported-content > .navbar-nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

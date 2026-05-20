@@ -4,7 +4,6 @@ body {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-
   color: #1f1813;
 }
 
@@ -18,12 +17,12 @@ body {
 
 /* Keep navbar links truly centered when social icons are on the right */
 @media (width >= 992px) {
-  #navbarSupportedContent {
+  #navbar-supported-content {
     position: relative;
     min-height: 2.5rem;
   }
 
-  #navbarSupportedContent > .navbar-nav {
+  #navbar-supported-content > .navbar-nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -306,7 +305,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   #order-form-section {
     background-attachment: fixed !important;
   }
@@ -337,7 +336,7 @@ footer {
   }
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   #order-form-section {
     background-attachment: fixed !important;
   }

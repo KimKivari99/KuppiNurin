@@ -17,12 +17,12 @@ body {
 
 /* Keep navbar links truly centered when social icons are on the right */
 @media (width >= 992px) {
-  #navbarSupportedContent {
+  #navbar-supported-content {
     position: relative;
     min-height: 2.5rem;
   }
 
-  #navbarSupportedContent > .navbar-nav {
+  #navbar-supported-content > .navbar-nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -106,15 +106,6 @@ footer {
   color: #162033;
 }
 
-#contact-intro-content p {
-  margin: 0 auto;
-  font-size: clamp(1rem, 2.1vw, 1.22rem);
-  font-weight: 600;
-  line-height: 1.35;
-  color: #304153;
-  max-width: 920px;
-}
-
 #contact-layout {
   max-width: 1200px;
 }
@@ -146,6 +137,15 @@ footer {
   line-height: 1.55;
   font-size: 0.98rem;
   font-weight: 600;
+}
+
+#contact-intro-content p {
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.1vw, 1.22rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: #304153;
+  max-width: 920px;
 }
 
 .contact-list {

@@ -18,12 +18,12 @@ body {
 
 /* Keep navbar links truly centered when social icons are on the right */
 @media (width >= 992px) {
-  #navbarSupportedContent {
+  #navbar-supported-content {
     position: relative;
     min-height: 2.5rem;
   }
 
-  #navbarSupportedContent > .navbar-nav {
+  #navbar-supported-content > .navbar-nav {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -105,15 +105,6 @@ footer {
   font-size: clamp(1.9rem, 4vw, 2.8rem);
 }
 
-#about-intro-content p {
-  margin: 0 auto;
-  max-width: 880px;
-  color: #304153;
-  font-size: clamp(1rem, 2.1vw, 1.22rem);
-  font-weight: 600;
-  line-height: 1.35;
-}
-
 /* Story layout with alternating text and image blocks */
 .story-wrapper {
   max-width: 1200px;
@@ -151,6 +142,15 @@ footer {
   margin-bottom: 0;
 }
 
+#about-intro-content p {
+  margin: 0 auto;
+  max-width: 880px;
+  color: #304153;
+  font-size: clamp(1rem, 2.1vw, 1.22rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .story-image-card {
   margin: 0;
   border-radius: 20px;
@@ -168,15 +168,17 @@ footer {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .story-image-mobile {
     display: block;
     margin-top: 1.2rem;
     margin-bottom: 0.5rem;
   }
+
   .story-image-desktop {
     display: none;
   }
+
   /* Optional: make image inside card fit nicely */
   .story-text-card .story-image-card img {
     height: clamp(180px, 38vw, 260px);
