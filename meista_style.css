@@ -16,12 +16,29 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Keep navbar links truly centered when social icons are on the right */
+@media (width >= 992px) {
+  #navbarSupportedContent {
+    position: relative;
+    min-height: 2.5rem;
+  }
+
+  #navbarSupportedContent > .navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    white-space: nowrap;
+  }
+}
+
 #stickynav.hidden {
   transform: translateY(-100%);
 }
 
 footer {
-  background-color: #fff;
+  background-color: #f3efe9;
 }
 
 /* Hero section background and centered content shell */
@@ -139,6 +156,33 @@ footer {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 16px 32px rgb(32 21 12 / 24%);
+}
+
+/* Hide mobile images by default, show on mobile */
+.story-image-mobile {
+  display: none;
+}
+
+/* Hide desktop images on mobile */
+.story-image-desktop {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .story-image-mobile {
+    display: block;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .story-image-desktop {
+    display: none;
+  }
+  /* Optional: make image inside card fit nicely */
+  .story-text-card .story-image-card img {
+    height: clamp(180px, 38vw, 260px);
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgb(32 21 12 / 14%);
+  }
 }
 
 .story-image-card img {

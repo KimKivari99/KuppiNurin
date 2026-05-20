@@ -1,539 +1,447 @@
 <!doctype html>
 <html lang="fi">
-  <head>
-    <!-- Global metadata, typography, and Bootstrap styles -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KuppiNurin</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="index_style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet" />
-  </head>
 
-  <body>
-    <!-- Sticky top navigation and hero banner -->
-    <header>
-      <nav
-        class="navbar navbar-expand-lg bg-body-tertiary justify-content-center"
-        id="stickynav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">KuppiNurin</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Etusivu</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./menu.html">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./pitopalvelu.html">Pitopalvelu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./meista.html">Meistä</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Yhteystiedot</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <section id="hero-section">
-        <div class="container-fluid" id="hero">
-          <div class="container" id="herobackground">
-            <div class="container justify-content-center" id="hero-content">
-              <h1 class="display-1">Kahvila KuppiNurin</h1>
-              <p class="lead">Niin hyvää, että menee kuppi nurin!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-    <main>
-      <!-- Business intro and opening-hours summary -->
-      <section id="business-section">
-        <div class="container" id="openinghours">
-          <div class="container" id="openinghourscontent">
-            <h2>Herkuttelijan paratiisi Nummelassa</h2>
-            <h3>
-              <small class="text-muted"
-                >Herkulliset leivokset - Laadukkaat kahvit - Toimiva
-                pitopalvelu</small
-              >
-            </h3>
-            <p class="lead">
-              Avoinna ma-pe 8.30 -16.00 // la 11.00 - 17.00 // su suljettu
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- About carousel describing core coffee shop services -->
-      <section id="information-section">
-        <div class="container-fluid" id="businessdescription">
-          <div class="container" id="businessdescriptionbackground">
-            <div
-              class="container justify-content-center"
-              id="businessdescriptioncontent">
-              <div id="businessdescription-carousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center" id="business-caption-1">
-                        <h4>Laadukas talossa jauhettu kahvi</h4>
-                        <p>
-                          Meiltä löytyy laaja valikoima laadukkaita kahveja,
-                          jotka jauhetaan juuri ennen tarjoilua tuoreimman ja
-                          parhaan mahdollisen makuelämyksen takaamiseksi joka
-                          ikiselle kupilliselle.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center" id="business-caption-2">
-                        <h4>Tuoreet leivonnaiset</h4>
-                        <p>
-                          Tarjoamme päivittäin tuoreita leivonnaisia, kuten
-                          croissanteja, muffinsseja, ja muita herkullisia
-                          vaihtoehtoja, jotka täydentävät kahvihetkesi.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center" id="business-caption-3">
-                        <h4>Kattava pitopalvelu</h4>
-                        <p>
-                          Tarjoamme kattavan pitopalvelun erilaisiin
-                          tilaisuuksiin, kuten juhliin, kokouksiin ja
-                          tapahtumiin. Räätälöimme menut asiakkaan toiveiden
-                          mukaan, jotta jokainen tilaisuus olisi onnistunut ja
-                          herkullinen.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#businessdescription-carousel"
-                  data-bs-slide="prev">
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#businessdescription-carousel"
-                  data-bs-slide="next">
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Menu preview carousel with links to exact products on menu page -->
-      <section id="menu-section">
-        <div class="container" id="menusectionseparator">
-          <div class="container" id="menusectionseparatorcontent">
-            <h2>Asiakkaan, päivän ja kauden tarpeisiin mukautuva menu</h2>
-            <h3>
-              <small class="text-muted"
-                >Tarjoamme monipuolisen ja herkullisen menun, joka mukautuu
-                asiakkaidemme, päivän ja kauden tarpeisiin. Valikoimastamme
-                löytyy aina tuoreita leivonnaisia, laadukkaita kahveja, sekä
-                erilaisia erikoisjuomia ja suolaisia vaihtoehtoja, jotka
-                täydentävät kahvihetkesi.
-              </small>
-            </h3>
-          </div>
-        </div>
-        <div class="container-fluid" id="menuexamples">
-          <div class="container" id="menuexamplebackground">
-            <div
-              class="container justify-content-center"
-              id="menuexamplecontent">
-              <div id="menu-carousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <!-- Carousel slide: coffees -->
-                  <div class="carousel-item active">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center">
-                        <h4>Kahvit</h4>
-                        <div class="row" id="image-caption-coffee">
-                          <ul class="list-group list-group-horizontal-sm">
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=espresso"
-                                >Espresso</a
-                              >
-                              <img
-                                src="images/menu_expresso.jpg"
-                                alt="Espresso" />
-                              <p>2,50 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=cappuccino"
-                                >Cappuccino</a
-                              >
-                              <img
-                                src="images/menu_cappuccino.jpg"
-                                alt="Cappuccino" />
-                              <p>3,20 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=latte">Latte</a>
-                              <img src="images/menu_latte.jpg" alt="Latte" />
-                              <p>3,50 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=americano"
-                                >Americano</a
-                              >
-                              <img
-                                src="images/menu_americano.jpg"
-                                alt="Americano" />
-                              <p>3,00 €</p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<head>
+  <!-- Global metadata, typography, and Bootstrap styles -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KuppiNurin | Etusivu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="index_style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+</head>
 
-                  <!-- Carousel slide: pastries -->
-                  <div class="carousel-item">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center">
-                        <h4>Leivonnaiset</h4>
-                        <div class="row" id="image-caption-pastries">
-                          <ul class="list-group list-group-horizontal-sm">
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=croissant"
-                                >Croisantti</a
-                              >
-                              <img
-                                src="images/menu_croissant.jpg"
-                                alt="Croisantti" />
-                              <p>3,80 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=muffinssi"
-                                >Muffinssi</a
-                              >
-                              <img
-                                src="images/menu_muffin.jpg"
-                                alt="Muffinssi" />
-                              <p>4,20 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=korvapuusti"
-                                >Korvapuusti</a
-                              >
-                              <img
-                                src="images/menu_korvapuusti.jpg"
-                                alt="Korvapuusti" />
-                              <p>3,60 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=suklaakakku"
-                                >Suklaakakku</a
-                              >
-                              <img
-                                src="images/menu_chocolatecake.jpg"
-                                alt="Suklaakakku" />
-                              <p>5,40 €</p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Carousel slide: special drinks -->
-                  <div class="carousel-item">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center">
-                        <h4>Erikoisjuomat</h4>
-                        <div class="row" id="image-caption-specialdrinks">
-                          <ul class="list-group list-group-horizontal-sm">
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=chai%20latte"
-                                >Chai Latte</a
-                              >
-                              <img
-                                src="images/menu_chailatte.jpg"
-                                alt="Chai Latte" />
-                              <p>4,90 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=matcha%20latte"
-                                >Matcha Latte</a
-                              >
-                              <img
-                                src="images/menu_matchalatte.jpg"
-                                alt="Matcha Latte" />
-                              <p>5,20 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=caramel%20latte"
-                                >Caramel Latte</a
-                              >
-                              <img
-                                src="images/menu_caramellatte.jpg"
-                                alt="Caramel Latte" />
-                              <p>3,60 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=affogato"
-                                >Affogato</a
-                              >
-                              <img
-                                src="images/menu_affogato.jpg"
-                                alt="Affogato" />
-                              <p>5,40 €</p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Carousel slide: savory items -->
-                  <div class="carousel-item">
-                    <div
-                      class="d-flex justify-content-center align-items-center">
-                      <div class="text-center">
-                        <h4>Suolaiset</h4>
-                        <div class="row" id="image-caption-savory">
-                          <ul class="list-group list-group-horizontal-sm">
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=kana%20panini"
-                                >Kana panini</a
-                              >
-                              <img
-                                src="images/menu_chickenpanini.jpg"
-                                alt="Kana panini" />
-                              <p>6,90 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=feta%20piirakka"
-                                >Feta piirakka</a
-                              >
-                              <img
-                                src="images/menu_fetapie.jpg"
-                                alt="Feta piirakka" />
-                              <p>5,80 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=tonnikala%20toast"
-                                >Tonnikala toast</a
-                              >
-                              <img
-                                src="images/menu_tunatoast.jpg"
-                                alt="Tonnikala toast" />
-                              <p>6,40 €</p>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="./menu.html?product=kasvis%20wrap"
-                                >Kasvis wrap</a
-                              >
-                              <img
-                                src="images/menu_vegetablewrap.jpg"
-                                alt="Kasvis wrap" />
-                              <p>6,20 €</p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#menu-carousel"
-                  data-bs-slide="prev">
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#menu-carousel"
-                  data-bs-slide="next">
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
+<body>
+  <!-- Sticky top navigation and hero banner -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center" id="stickynav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">KuppiNurin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Etusivu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pitopalvelu.html">Pitopalvelu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./meista.html">Meistä</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./yhteystiedot.html">Yhteystiedot</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 ms-lg-auto mt-2 mt-lg-0">
+            <a class="nav-link px-0 py-0 text-body-secondary" href="https://www.instagram.com" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram">
+              <i class="bi bi-instagram fs-5"></i>
+            </a>
+            <a class="nav-link px-0 py-0 text-body-secondary" href="https://www.facebook.com" target="_blank"
+              rel="noopener noreferrer" aria-label="Facebook">
+              <i class="bi bi-facebook fs-5"></i>
+            </a>
+            <a class="nav-link px-0 py-0 text-body-secondary" href="https://www.tiktok.com" target="_blank"
+              rel="noopener noreferrer" aria-label="TikTok">
+              <i class="bi bi-tiktok fs-5"></i>
+            </a>
           </div>
         </div>
-      </section>
-      <!-- Catering preview with tabbed card content -->
-      <section id="catering-section">
-        <div class="container" id="cateringssectionseparator">
-          <div class="container" id="cateringssectionseparatorcontent">
-            <h2>Pitopalvelut</h2>
-            <h3>
-              <small class="text-muted"
-                >Tarjoamme kattavan pitopalvelun erilaisiin tilaisuuksiin, kuten
-                juhliin, kokouksiin ja tapahtumiin. Räätälöimme menut asiakkaan
-                toiveiden mukaan, jotta jokainen tilaisuus olisi onnistunut ja
-                herkullinen.
-              </small>
-            </h3>
+      </div>
+    </nav>
+    <section id="hero-section">
+      <div class="container-fluid" id="hero">
+        <div class="container" id="herobackground">
+          <div class="container justify-content-center" id="hero-content">
+            <h1 class="display-1">Kahvila KuppiNurin</h1>
+            <p class="lead">Niin hyvää, että menee kuppi nurin!</p>
           </div>
         </div>
-        <div class="container-fluid" id="catering">
-          <div class="container" id="cateringbackground">
-            <div class="container justify-content-center" id="cateringcontent">
-              <div class="card">
-                <div class="card-header">
-                  <ul
-                    class="nav nav-pills card-header-pills"
-                    id="catering-tabs"
-                    role="tablist">
-                    <li class="nav-item">
-                      <button
-                        class="nav-link active"
-                        id="catering-menu-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#catering-menu"
-                        type="button"
-                        role="tab"
-                        aria-controls="catering-menu"
-                        aria-selected="true">
-                        Juhlamenu
-                      </button>
-                    </li>
-                    <li class="nav-item">
-                      <button
-                        class="nav-link"
-                        id="catering-info-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#catering-info"
-                        type="button"
-                        role="tab"
-                        aria-controls="catering-info"
-                        aria-selected="false">
-                        Lisätiedot
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <div class="tab-content" id="catering-tabs-content">
-                    <div
-                      class="tab-pane fade show active"
-                      id="catering-menu"
-                      role="tabpanel"
-                      aria-labelledby="catering-menu-tab"
-                      tabindex="0">
-                      <img
-                        src="https://picsum.photos/id/0/800"
-                        class="card-img-top"
-                        alt="Juhlamenu kuva" />
-                      <h5 class="card-title pt-3">Juhlamenu</h5>
-                      <p class="card-text">
-                        Esimerkkikattaus juhliin: suolaiset alkupalat, lämmin
-                        pääruoka ja makea jälkiruoka. Menun sisältö voidaan
-                        räätälöidä tapahtuman mukaan.
+      </div>
+    </section>
+  </header>
+  <main>
+    <!-- Business intro and opening-hours summary -->
+    <section id="business-section">
+      <div class="container" id="openinghours">
+        <div class="container" id="openinghourscontent">
+          <h2>Herkuttelijan paratiisi Nummelassa</h2>
+          <h3>
+            <small class="text-muted">Herkulliset leivokset - Laadukkaat kahvit - Toimiva
+              pitopalvelu</small>
+          </h3>
+          <p class="lead">
+            Avoinna ma-pe 9.00 - 20.00 // la 11.00 - 19.00 // su suljettu
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About carousel describing core coffee shop services -->
+    <section id="information-section">
+      <div class="container-fluid" id="businessdescription">
+        <div class="container" id="businessdescriptionbackground">
+          <div class="container justify-content-center" id="businessdescriptioncontent">
+            <div id="businessdescription-carousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center" id="business-caption-1">
+                      <h4>Laadukas talossa jauhettu kahvi</h4>
+                      <p>
+                        Meiltä löytyy laaja valikoima laadukkaita kahveja,
+                        jotka jauhetaan juuri ennen tarjoilua tuoreimman ja
+                        parhaan mahdollisen makuelämyksen takaamiseksi joka
+                        ikiselle kupilliselle.
                       </p>
                     </div>
-                    <div
-                      class="tab-pane fade"
-                      id="catering-info"
-                      role="tabpanel"
-                      aria-labelledby="catering-info-tab"
-                      tabindex="0">
-                      <img
-                        src="https://picsum.photos/id/292/800"
-                        class="card-img-top"
-                        alt="Pitopalvelun lisatiedot" />
-                      <h5 class="card-title pt-3">Lisätiedot</h5>
-                      <p class="card-text">
-                        Toimitamme tarjoilut Nummelan alueelle. Varaus kannattaa
-                        tehdä vähintään viikko etukäteen. Kysy tarjous
-                        sähköpostilla tai puhelimitse.
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center" id="business-caption-2">
+                      <h4>Tuoreet leivonnaiset</h4>
+                      <p>
+                        Tarjoamme päivittäin tuoreita leivonnaisia, kuten
+                        croissanteja, muffinsseja, ja muita herkullisia
+                        vaihtoehtoja, jotka täydentävät kahvihetkesi.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center" id="business-caption-3">
+                      <h4>Kattava pitopalvelu</h4>
+                      <p>
+                        Tarjoamme kattavan pitopalvelun erilaisiin
+                        tilaisuuksiin, kuten juhliin, kokouksiin ja
+                        tapahtumiin. Räätälöimme menut asiakkaan toiveiden
+                        mukaan, jotta jokainen tilaisuus olisi onnistunut ja
+                        herkullinen.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#businessdescription-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#businessdescription-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <!-- Footer links and copyright -->
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">About</a>
-        </li>
-      </ul>
-      <p class="text-center text-body-secondary">© 2025 KuppiNurin Oy</p>
-    </footer>
-    <!-- Bootstrap JavaScript + site-specific behavior -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-  </body>
+      </div>
+    </section>
+    <!-- Menu preview carousel with links to exact products on menu page -->
+    <section id="menu-section">
+      <div class="container" id="menusectionseparator">
+        <div class="container" id="menusectionseparatorcontent">
+          <h2>Asiakkaan, päivän ja kauden tarpeisiin mukautuva menu</h2>
+          <h3>
+            <small class="text-muted">Tarjoamme monipuolisen ja herkullisen menun, joka mukautuu
+              asiakkaidemme, päivän ja kauden tarpeisiin. Valikoimastamme
+              löytyy aina tuoreita leivonnaisia, laadukkaita kahveja, sekä
+              erilaisia erikoisjuomia ja suolaisia vaihtoehtoja, jotka
+              täydentävät kahvihetkesi.
+            </small>
+          </h3>
+        </div>
+      </div>
+      <div class="container-fluid" id="menuexamples">
+        <div class="container" id="menuexamplebackground">
+          <div class="container justify-content-center" id="menuexamplecontent">
+            <div id="menu-carousel" class="carousel slide">
+              <div class="carousel-inner">
+                <!-- Carousel slide: coffees -->
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                      <h4>Kahvit</h4>
+                      <div class="row" id="image-caption-coffee">
+                        <ul class="list-group list-group-horizontal-sm">
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=espresso">Espresso</a>
+                            <img src="images/menu_expresso.jpg" alt="Espresso" />
+                            <p>2,50 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=cappuccino">Cappuccino</a>
+                            <img src="images/menu_cappuccino.jpg" alt="Cappuccino" />
+                            <p>3,20 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=latte">Latte</a>
+                            <img src="images/menu_latte.jpg" alt="Latte" />
+                            <p>3,50 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=americano">Americano</a>
+                            <img src="images/menu_americano.jpg" alt="Americano" />
+                            <p>3,00 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel slide: pastries -->
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                      <h4>Leivonnaiset</h4>
+                      <div class="row" id="image-caption-pastries">
+                        <ul class="list-group list-group-horizontal-sm">
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=croissant">Croisantti</a>
+                            <img src="images/menu_croissant.jpg" alt="Croisantti" />
+                            <p>3,80 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=muffinssi">Muffinssi</a>
+                            <img src="images/menu_muffin.jpg" alt="Muffinssi" />
+                            <p>4,20 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=korvapuusti">Korvapuusti</a>
+                            <img src="images/menu_korvapuusti.jpg" alt="Korvapuusti" />
+                            <p>3,60 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=suklaakakku">Suklaakakku</a>
+                            <img src="images/menu_chocolatecake.jpg" alt="Suklaakakku" />
+                            <p>5,40 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel slide: special drinks -->
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                      <h4>Erikoisjuomat</h4>
+                      <div class="row" id="image-caption-specialdrinks">
+                        <ul class="list-group list-group-horizontal-sm">
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=chai%20latte">Chai Latte</a>
+                            <img src="images/menu_chailatte.jpg" alt="Chai Latte" />
+                            <p>4,90 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=matcha%20latte">Matcha Latte</a>
+                            <img src="images/menu_matchalatte.jpg" alt="Matcha Latte" />
+                            <p>5,20 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=caramel%20latte">Caramel Latte</a>
+                            <img src="images/menu_caramellatte.jpg" alt="Caramel Latte" />
+                            <p>3,60 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=affogato">Affogato</a>
+                            <img src="images/menu_affogato.jpg" alt="Affogato" />
+                            <p>5,40 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel slide: savory items -->
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                      <h4>Suolaiset</h4>
+                      <div class="row" id="image-caption-savory">
+                        <ul class="list-group list-group-horizontal-sm">
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=kana%20panini">Kana panini</a>
+                            <img src="images/menu_chickenpanini.jpg" alt="Kana panini" />
+                            <p>6,90 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=feta%20piirakka">Feta piirakka</a>
+                            <img src="images/menu_fetapie.jpg" alt="Feta piirakka" />
+                            <p>5,80 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=tonnikala%20toast">Tonnikala toast</a>
+                            <img src="images/menu_tunatoast.jpg" alt="Tonnikala toast" />
+                            <p>6,40 €</p>
+                          </li>
+                          <li class="list-group-item">
+                            <a href="./menu.html?product=kasvis%20wrap">Kasvis wrap</a>
+                            <img src="images/menu_vegetablewrap.jpg" alt="Kasvis wrap" />
+                            <p>6,20 €</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#menu-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#menu-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Catering preview with tabbed card content -->
+    <section id="catering-section">
+      <div class="container" id="cateringssectionseparator">
+        <div class="container" id="cateringssectionseparatorcontent">
+          <h2>Pitopalvelut</h2>
+          <h3>
+            <small class="text-muted">Tarjoamme kattavan pitopalvelun erilaisiin tilaisuuksiin, kuten
+              juhliin, kokouksiin ja tapahtumiin. Räätälöimme menut asiakkaan
+              toiveiden mukaan, jotta jokainen tilaisuus olisi onnistunut ja
+              herkullinen.
+            </small>
+          </h3>
+        </div>
+      </div>
+      <div class="container-fluid" id="catering">
+        <div class="container" id="cateringbackground">
+          <div class="container justify-content-center" id="cateringcontent">
+            <div class="card">
+              <div class="card-header">
+                <ul class="nav nav-pills card-header-pills" id="catering-tabs" role="tablist">
+                  <li class="nav-item">
+                    <button class="nav-link active" id="catering-menu-tab" data-bs-toggle="pill"
+                      data-bs-target="#catering-menu" type="button" role="tab" aria-controls="catering-menu"
+                      aria-selected="true">
+                      Esimerkkimenu
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="nav-link" id="catering-info-tab" data-bs-toggle="pill"
+                      data-bs-target="#catering-info" type="button" role="tab" aria-controls="catering-info"
+                      aria-selected="false">
+                      Palvelut
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content" id="catering-tabs-content">
+                  <div class="tab-pane fade show active" id="catering-menu" role="tabpanel"
+                    aria-labelledby="catering-menu-tab" tabindex="0">
+                    <img src="images/home_catering_example_one.jpg" class="card-img-top"
+                      alt="Pitopalvelun esimerkkimenu" />
+                    <h5 class="card-title pt-3">Esimerkkimenu juhliin</h5>
+                    <p class="card-text">
+                      Esimerkkikokonaisuus 40-60 hengen tilaisuuteen:
+                      cocktailpalat alkuun, sesongin salaatti ja lämmin
+                      buffetpääruoka sekä kahvi ja jälkiruoka. Jokainen menu
+                      räätälöidään tapahtuman teeman, budjetin ja
+                      erityisruokavalioiden mukaan.
+                    </p>
+                    <a href="./pitopalvelu.html#order-form-section" class="btn catering-cta-btn">
+                      Tilaa pitopalvelu tapahtumaasi
+                    </a>
+                  </div>
+                  <div class="tab-pane fade" id="catering-info" role="tabpanel" aria-labelledby="catering-info-tab"
+                    tabindex="0">
+                    <img src="images/home_catering_example_two.jpg" class="card-img-top"
+                      alt="Pitopalvelun palvelukuvaus" />
+                    <h5 class="card-title pt-3">Pitopalvelun palvelut</h5>
+                    <p class="card-text">
+                      Toimitamme, katamme ja tarvittaessa hoidamme tarjoilun
+                      Nummelan alueella. Saatavilla ovat myös astiavuokraus,
+                      henkilöstö sekä kasvis-, vegaani- ja
+                      allergiaystävälliset vaihtoehdot. Suosittelemme varausta
+                      1-2 viikkoa etukäteen.
+                    </p>
+                    <a href="./pitopalvelu.html#order-form-section" class="btn catering-cta-btn">
+                      Tilaa pitopalvelu tapahtumaasi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience section with tabs -->
+    <section id="experience-section">
+      <div class="container" id="experiencesectionseparator">
+        <div class="container" id="experiencesectionseparatorcontent">
+          <h2>Tule nauttimaan Nummelalaisesta kahvilakulttuurista</h2>
+          <h3>
+            <small class="text-muted">
+              Sijaitsemme Nummelan keskustassa, vain kivenheiton päässä juna-asemalta.
+            </small>
+          </h3>
+        </div>
+      </div>
+      <div class="container-fluid" id="experience">
+        <div class="container" id="experiencebackground">
+          <div class="container justify-content-center" id="experiencecontent">
+            <div id="experience-text-content">
+              <h4>Tervetuloa herkuttelemaan!</h4>
+              <p>Nauti hetken kahvilan tunnelmassa, kunnes kuppi menee nurin. Olemme täällä joka päivä tervehtimässä
+                sinua lämpimällä
+                kahvilla, tuoreilla leivonnaisilla ja ystävällisellä palvelulla. Etsitkö ainutlaatuista kahvikokemusta?
+                Oletko
+                suunnittelemassa tapahtumaa? Poikkeile meille - tämä paikka on sinua varten</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer links and copyright -->
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item">
+        <a href="./index.html" class="nav-link px-2 text-body-secondary">Etusivu</a>
+      </li>
+      <li class="nav-item">
+        <a href="./menu.html" class="nav-link px-2 text-body-secondary">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#openinghours" class="nav-link px-2 text-body-secondary">Aukioloajat</a>
+      </li>
+      <li class="nav-item">
+        <a href="./yhteystiedot.html#contact-section" class="nav-link px-2 text-body-secondary">Ota yhteyttä</a>
+      </li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2025 KuppiNurin Oy</p>
+  </footer>
+  <!-- Bootstrap JavaScript + site-specific behavior -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>

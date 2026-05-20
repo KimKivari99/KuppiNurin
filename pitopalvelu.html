@@ -5,10 +5,11 @@
     <!-- Global metadata, typography, and Bootstrap styles -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KuppiNurin</title>
+    <title>KuppiNurin | Pitopalvelu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="pitopalvelu_style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
@@ -40,9 +41,23 @@
                             <a class="nav-link" href="./meista.html">Meistä</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Yhteystiedot</a>
+                            <a class="nav-link" href="./yhteystiedot.html">Yhteystiedot</a>
                         </li>
                     </ul>
+                    <div class="d-flex align-items-center gap-3 ms-lg-auto mt-2 mt-lg-0">
+                        <a class="nav-link px-0 py-0 text-body-secondary" href="https://www.instagram.com"
+                            target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                        <a class="nav-link px-0 py-0 text-body-secondary" href="https://www.facebook.com"
+                            target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a class="nav-link px-0 py-0 text-body-secondary" href="https://www.tiktok.com" target="_blank"
+                            rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="bi bi-tiktok fs-5"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -176,7 +191,8 @@
 
                             <div class="form-submit-row">
                                 <button type="submit" class="order-submit-btn">Lähetä tarjouspyyntö</button>
-                                <p class="form-note">Lomake ei tallenna tietoja automaattisesti. Ota yhteyttä, jos
+                                <p class="form-note">Lomake ei tallenna tietoja automaattisesti. <a
+                                        href="yhteystiedot.html#contact-section">Ota yhteyttä</a>, jos
                                     tarvitset nopeamman vastauksen.</p>
                             </div>
                         </form>
@@ -189,19 +205,16 @@
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+                <a href="./index.html" class="nav-link px-2 text-body-secondary">Etusivu</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+                <a href="./menu.html" class="nav-link px-2 text-body-secondary">Menu</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+                <a href="index.html#openinghours" class="nav-link px-2 text-body-secondary">Aukioloajat</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+                <a href="./yhteystiedot.html#contact-section" class="nav-link px-2 text-body-secondary">Ota yhteyttä</a>
             </li>
         </ul>
         <p class="text-center text-body-secondary">© 2025 KuppiNurin Oy</p>

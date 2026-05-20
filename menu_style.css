@@ -1,3 +1,76 @@
+/* Pitopalvelu menu info section styles */
+
+#pitopalvelu-menu-background {
+  background-image: url("images/catering_home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#pitopalvelu-menu-background-card {
+  background-color: rgb(255 255 255 / 70%);
+  width: 70%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+#pitopalvelu-menu-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+#pitopalvelu-menu-content h4 {
+  margin: 0 0 0.8rem;
+  color: #2a211a;
+}
+
+#pitopalvelu-menu-content p {
+  margin: 0 0 1.2rem;
+  color: #2a211a;
+}
+
+.pitopalvelu-btn {
+  background-color: #6f4e37;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+  transition: background 0.2s;
+}
+.pitopalvelu-btn:hover,
+.pitopalvelu-btn:focus {
+  background-color: #543a27;
+}
+
+@media (width <= 900px) {
+  #pitopalvelu-menu-background {
+    background-attachment: scroll;
+  }
+
+  #pitopalvelu-menu-background-card {
+    width: 100%;
+    min-height: 320px;
+    border-radius: 14px;
+  }
+
+  #pitopalvelu-menu-content {
+    padding: 0 18px;
+  }
+}
 /* Base typography and global text rendering */
 body {
   font-family: Outfit, sans-serif;
@@ -11,6 +84,23 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* Keep navbar links truly centered when social icons are on the right */
+@media (width >= 992px) {
+  #navbarSupportedContent {
+    position: relative;
+    min-height: 2.5rem;
+  }
+
+  #navbarSupportedContent > .navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    white-space: nowrap;
+  }
 }
 
 /* Hero section background and centered content shell */
@@ -47,7 +137,6 @@ body {
   align-items: center;
   height: 100%;
   color: black;
-  text-shadow: 2px 2px 4px rgb(0 0 0 / 70%);
 }
 
 /* Menu page section container */

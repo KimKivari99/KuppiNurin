@@ -13,6 +13,23 @@ body {
   z-index: 1000;
 }
 
+/* Keep navbar links truly centered when social icons are on the right */
+@media (width >= 992px) {
+  #navbarSupportedContent {
+    position: relative;
+    min-height: 2.5rem;
+  }
+
+  #navbarSupportedContent > .navbar-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    white-space: nowrap;
+  }
+}
+
 /* Hero section background and centered content shell */
 #hero {
   background-image: url("images/hero_home_image.jpg");
@@ -47,7 +64,6 @@ body {
   align-items: center;
   height: 100%;
   color: black;
-  text-shadow: 2px 2px 4px rgb(0 0 0 / 70%);
 }
 
 /* Opening-hours intro block */
@@ -276,6 +292,139 @@ ul.list-group-horizontal-sm > .list-group-item {
   font-weight: 700;
   line-height: 1.2;
 }
+/* Experience section heading area */
+#experiencesectionseparator {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+}
+
+#experiencesectionseparatorcontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* Experience feature panel and text layout */
+#experience {
+  background-image: url("images/menusection_home_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 350px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+#experiencebackground {
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 70%;
+  min-height: auto;
+  height: auto;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: visible;
+  padding: 3rem 2rem;
+}
+
+#experiencecontent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: visible;
+}
+
+#experience-text-content {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Mobile adjustments for experience section */
+@media (width <= 900px) {
+  #experience {
+    min-height: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #experiencebackground {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .experience-heading {
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-description {
+    font-size: 1rem;
+  }
+}
+/* Welcome section with inviting message */
+#welcome-section {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+#welcomeseparator {
+  width: 100%;
+  display: flex;
+  padding: 0;
+}
+
+#welcomeseparatorcontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#welcomeseparatorcontent h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: #2a211a;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.welcome-text:last-of-type {
+  margin-bottom: 0;
+}
 
 /* Catering section heading area */
 #cateringssectionseparator {
@@ -302,18 +451,21 @@ ul.list-group-horizontal-sm > .list-group-item {
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding-top: 20px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
 #cateringbackground {
   background-color: white;
   width: 70%;
-  height: 400px;
+  min-height: 400px;
+  height: auto;
   opacity: 0.9;
   display: flex;
   justify-content: center;
@@ -325,20 +477,20 @@ ul.list-group-horizontal-sm > .list-group-item {
 
 #cateringcontent {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding: 0 1rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #cateringcontent .card {
-  width: min(100%, 30rem);
-  height: 100%;
+  width: min(100%, 34rem);
+  height: auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   border: none;
 }
 
@@ -350,13 +502,13 @@ ul.list-group-horizontal-sm > .list-group-item {
 #cateringcontent .card-body {
   flex: 1 1 auto;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
   border: none;
 }
 
 #cateringcontent .card-img-top {
   width: 100%;
-  height: 130px;
+  height: clamp(120px, 18vh, 170px);
   object-fit: cover;
 }
 
@@ -376,7 +528,7 @@ ul.list-group-horizontal-sm > .list-group-item {
 }
 
 #catering-tabs-content .tab-pane {
-  min-height: 100%;
+  min-height: 0;
 }
 
 #catering-tabs-content .card-text {
@@ -396,6 +548,7 @@ ul.list-group-horizontal-sm > .list-group-item {
 }
 
 .catering-cta-btn {
+  display: inline-block;
   margin-top: 0.5rem;
   background-color: #6f4e37;
   border-color: #6f4e37;
@@ -412,6 +565,14 @@ ul.list-group-horizontal-sm > .list-group-item {
 
 /* Tablet and mobile adjustments */
 @media (width <= 900px) {
+  #hero,
+  #businessdescription,
+  #menuexamples,
+  #catering,
+  #experience {
+    background-attachment: scroll;
+  }
+
   .carousel-control-prev:focus-visible,
   .carousel-control-next:focus-visible {
     box-shadow: none;
@@ -447,7 +608,7 @@ ul.list-group-horizontal-sm > .list-group-item {
   #cateringbackground {
     width: 100%;
     height: auto;
-    min-height: 400px;
+    min-height: 0;
   }
 
   #cateringcontent {
@@ -456,7 +617,7 @@ ul.list-group-horizontal-sm > .list-group-item {
 
   #cateringcontent .card {
     width: 100%;
-    max-height: calc(100% - 1.5rem);
+    max-height: none;
   }
 
   #cateringcontent .card-body {
