@@ -32,7 +32,7 @@ body {
 
 /* Hero section background and centered content shell */
 #hero {
-  background-image: url("images/hero_home_image.jpg");
+  background-image: url("../images/hero_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@ body {
 
 /* Business description section with parallax-like background */
 #businessdescription {
-  background-image: url("images/infosection_home_image.jpg");
+  background-image: url("../images/infosection_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -187,7 +187,7 @@ body {
 
 /* Menu example carousel background panel */
 #menuexamples {
-  background-image: url("images/menusection_home_image.jpg");
+  background-image: url("../images/menusection_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -312,7 +312,7 @@ ul.list-group-horizontal-sm > .list-group-item {
 
 /* Experience feature panel and text layout */
 #experience {
-  background-image: url("images/menusection_home_image.jpg");
+  background-image: url("../images/menusection_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -447,7 +447,7 @@ ul.list-group-horizontal-sm > .list-group-item {
 
 /* Catering feature panel and card layout */
 #catering {
-  background-image: url("images/catering_home_image.jpg");
+  background-image: url("../images/catering_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -698,3 +698,4 @@ ul.list-group-horizontal-sm > .list-group-item {
     font-size: 14px;
   }
 }
+

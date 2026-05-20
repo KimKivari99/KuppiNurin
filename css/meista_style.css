@@ -43,7 +43,7 @@ footer {
 
 /* Hero section background and centered content shell */
 #hero {
-  background-image: url("images/hero_about_image.jpg");
+  background-image: url("../images/hero_about_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@ footer {
 /* About page intro separator */
 
 #about-us {
-  background-image: url("images/about_section_image.jpg");
+  background-image: url("../images/about_section_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -229,3 +229,4 @@ footer {
     font-size: 0.98rem;
   }
 }
+

@@ -42,7 +42,7 @@ footer {
 
 /* Hero section background and centered content shell */
 #hero {
-  background-image: url("images/infosection_home_image.jpg");
+  background-image: url("../images/infosection_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@ footer {
 
 /* Contact section shell */
 #contact-section {
-  background-image: url("images/menusection_home_image.jpg");
+  background-image: url("../images/menusection_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -315,3 +315,4 @@ footer {
     grid-column: auto;
   }
 }
+

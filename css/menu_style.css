@@ -1,7 +1,7 @@
 /* Pitopalvelu menu info section styles */
 
 #pitopalvelu-menu-background {
-  background-image: url("images/catering_home_image.jpg");
+  background-image: url("../images/catering_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,7 +107,7 @@ body {
 
 /* Hero section background and centered content shell */
 #hero {
-  background-image: url("images/hero_menu_image.jpg");
+  background-image: url("../images/hero_menu_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -488,3 +488,4 @@ ul.list-group-horizontal-sm > .list-group-item {
     max-width: 180px;
   }
 }
+

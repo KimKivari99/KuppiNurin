@@ -42,7 +42,7 @@ footer {
 
 /* Hero section background and centered content shell */
 #hero {
-  background-image: url("images/hero_catering_image.jpg");
+  background-image: url("../images/hero_catering_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@ footer {
 
 /* Order form section shell */
 #order-form-section {
-  background-image: url("images/catering_home_image.jpg");
+  background-image: url("../images/catering_home_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -341,3 +341,4 @@ footer {
     background-attachment: fixed !important;
   }
 }
+
